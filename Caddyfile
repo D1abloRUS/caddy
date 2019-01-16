@@ -1,0 +1,11 @@
+:3000 {
+  root /var/www/html
+  rewrite {
+    to {uri} {uri}/ /index.html
+  }
+  expires {
+    match .js$ 1s
+    match .html$ 1s
+    match .css$ 1s
+  }
+}

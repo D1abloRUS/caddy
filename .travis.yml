@@ -1,0 +1,12 @@
+env:
+  global:
+  - REPO=d1ablorus/caddy
+
+services:
+- docker
+
+script:
+- docker build -t $REPO .;
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+- docker push $REPO;
+- docker rmi -f $REPO;
