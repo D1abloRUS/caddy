@@ -4,7 +4,6 @@ env:
 
 services:
 - docker
-
 script:
 - docker build -t $REPO .;
 - echo $DOCKER_PASSWORD | docker login -u="$DOCKER_USERNAME" --password-stdin;
