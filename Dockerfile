@@ -24,5 +24,6 @@ RUN apk --update upgrade \
 
 EXPOSE 80 443
 
+
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["caddy", "-agree", "--conf", "/etc/caddy/Caddyfile"]
